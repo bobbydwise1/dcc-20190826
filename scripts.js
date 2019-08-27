@@ -11,7 +11,7 @@ const rand5 = () => {
 }
 
 const rand7 = (seed) => {
-  return Math.round(Math.random()*(7-1)+1);
+  return Math.round(seed/5*7);
 }
 
 console.log(rand5())
