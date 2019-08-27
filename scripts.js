@@ -10,12 +10,19 @@ const rand5 = () => {
   return Math.round(Math.random()*(5-1)+1);
 }
 
+const rand7 = (seed) => {
+  return Math.round(Math.random()*(7-1)+1);
+}
+
 console.log(rand5())
 
 $(document).ready(function() {
   $('#form1').submit(function(event){
     event.preventDefault()
-    $('#output-section-0').text(rand5())
-    $('#output-section-1').text(rand5())
+    let output0 = rand5()
+    let output1 = rand7(output0)
+    console.log(output1)
+    $('#output-section-0').text(output0)
+    $('#output-section-1').text(output1)
   })
 });
